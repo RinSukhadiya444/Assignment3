@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Vehicle Information Form</titles>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Custom Vehicle Information Form</h2>
+        <form id="vehicleForm" onsubmit="return validateForm()">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required>
+
+            <label for="province">Province:</label>
+            <input type="text" id="province" name="province" required>
+
+            <label for="postalCode">Postal Code:</label>
+            <input type="text" id="postalCode" name="postalCode" pattern="[A-Za-z]\d[A-Za-z] \d[A-Za-z]\d" required title="Enter a valid postal code (e.g., A1A 1A1)">
+
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}|[(][0-9]{3}[)][0-9]{3}-[0-9]{4}" required title="Enter a valid phone number (e.g., 123-123-1234 or (123)123-1234)">
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="vehicleMake">Vehicle Make:</label>
+            <input type="text" id="vehicleMake" name="vehicleMake" required>
+
+            <label for="vehicleModel">Vehicle Model:</label>
+            <input type="text" id="vehicleModel" name="vehicleModel" required>
+
+            <label for="vehicleYear">Vehicle Year:</label>
+            <input type="text" id="vehicleYear" name="vehicleYear" required pattern="[0-9]{4}" title="Enter a valid year (e.g., 2012)">
+
+
+            <button type="submit" id="submit">Save Information</button>
+        </form>
+
+
+        <div id="savedList">
+
+        </div>
+    </div>
+
+
+</body>
+</html>
